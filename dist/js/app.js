@@ -1055,7 +1055,6 @@
           let e = n.getBoundingClientRect().top + scrollY;
           window.scrollTo({ top: r ? e - r : e, behavior: "smooth" });
         }
-        d(`[gotoBlock]: Юхуу...едем к ${e}`);
       } else d(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${e}`);
     };
     const u = { selectModule: null };

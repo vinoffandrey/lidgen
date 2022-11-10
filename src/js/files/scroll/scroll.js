@@ -1,5 +1,5 @@
 // Подключение функционала "Чертогов Фрилансера"
-import { isMobile, getHash, setHash } from "../functions.js";
+import { setHash } from "../functions.js";
 // Импорт класса наблюдателя.
 import { ScrollWatcher } from "../../libs/watcher.js";
 // Модуль прокрутки к блоку
@@ -36,7 +36,6 @@ export function pageNavigation() {
 					? gotoLink.dataset.gotoSpeed
 					: "500";
 				gotoBlock(gotoLinkSelector, noHeader, gotoSpeed);
-				setHash(hash);
 				e.preventDefault();
 			}
 		} else if (e.type === "watcherCallback") {
@@ -62,8 +61,8 @@ export function pageNavigation() {
 						// Не видим объект
 						navigatorCurrentItem
 							? navigatorCurrentItem.classList.remove(
-									"_navigator-active"
-							  )
+								"_navigator-active"
+							)
 							: null;
 					}
 				}
@@ -188,9 +187,8 @@ export function stickyBlock() {
 					stickyItemValues.position = `fixed`;
 					stickyItemValues.bottom = `auto`;
 					stickyItemValues.top = `${offsetTop}px`;
-					stickyItemValues.left = `${
-						stickyBlockItem.getBoundingClientRect().left
-					}px`;
+					stickyItemValues.left = `${stickyBlockItem.getBoundingClientRect().left
+						}px`;
 					stickyItemValues.width = `${stickyBlockItem.offsetWidth}px`;
 				} else if (scrollY >= endPoint) {
 					stickyItemValues.position = `absolute`;
