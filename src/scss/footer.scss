@@ -1,0 +1,84 @@
+//====================================================================================================
+
+//====================================================================================================
+
+.footer {
+	background-color: $darkColor;
+	&__container {
+		@include adaptiveValue("margin-top", 80, 60, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 80, 45, $containerWidth, $minWidth, 1);
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		@media(max-width: $mobile) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		&:nth-child(1) {
+			flex: 0 0 auto;
+			@media(max-width: $mobile) {
+				flex: 1 1 100%!important;
+				flex-direction: row!important;
+				gap: 20px;
+			}
+			@media(max-width: $mobileSmall) {
+				flex-direction: column!important;
+				gap: 0!important;
+			}
+		}
+		&:nth-child(2) {
+			flex: 0 1 500px;
+			align-items: center;
+			@media(max-width: $mobile) {
+				flex: 1 1 100%!important;
+			}
+		}
+		&:nth-child(3) {
+			justify-content: flex-end;
+			flex: 0 0 auto;
+			@media(max-width: $mobile) {
+				flex: 1 1 100%!important;
+			}
+			@media(max-width: $mobileSmall) {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	&__item {
+		color: $whiteColor;
+		margin-bottom: 20px;
+		@media(max-width: $mobileSmall) {
+			font-size: 18px!important;
+		}
+	}
+
+	&__nav {
+		width: 100%;
+		ul {
+			display: flex;
+			justify-content: space-between;
+			gap: 10px;
+			width: 100%;
+			@media(max-width: $mobileSmall) {
+				flex-direction: column!important;
+				gap: 20px!important;
+			}
+		}
+	}
+
+	&__link {
+		color: $whiteColor;
+		@media(max-width: $mobileSmall) {
+			font-size: 18px!important;
+		}
+	}
+}
+

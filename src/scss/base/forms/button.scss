@@ -1,0 +1,32 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	display: inline-flex;
+	padding: 12px 50px;
+	border: 1px solid $blackColor;
+	border-radius: 8px;
+	background-color: $whiteColor;
+	color: $blackColor;
+	opacity: 0.5;
+	transition: all .3s ease 0s;
+	cursor: pointer;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $whiteColor;
+			background-color: $darkColor;
+			border: 1px solid $darkColor;
+		}
+	}
+	&:active, &:focus {
+		color: $whiteColor;
+		background-color: #016A81;
+		border: 1px solid #016A81;
+	}
+	&.active {
+		opacity: 1;
+	}
+}

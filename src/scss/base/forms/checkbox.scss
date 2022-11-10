@@ -1,0 +1,43 @@
+.checkbox {
+	display: none;
+}
+.checkbox__label {
+	min-width: 26px;
+	height: 26px;
+	position: relative;
+	cursor: pointer;
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+		width: 26px;
+		height: 26px;
+		border: 1px solid $blackColor;
+		border-radius: 5px;
+		transition: all .3s ease 0s;
+	}
+	&:before {
+		position: absolute;
+		top: 6px;
+		left: 4px;
+		content: "";
+		width: 18px;
+		height: 13px;
+		opacity: 0;
+		z-index: 1;
+		visibility: hidden;
+		background-image: url('../../../img/forms/check.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		transition: all .3s ease 0s;
+	}
+}
+.checkbox:checked ~ .checkbox__label::after {
+	background-color: $blueColor;
+	border: 1px solid $blueColor;
+}
+.checkbox:checked ~ .checkbox__label::before {
+	opacity: 1;
+	visibility: visible;
+}
