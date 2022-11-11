@@ -22,6 +22,9 @@ textarea {
 	}
 	&._error {
 	}
+	&._form-error {
+		border: 1px solid #ff3737;
+	}
 }
 
 textarea.input {

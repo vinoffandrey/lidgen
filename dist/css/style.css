@@ -264,6 +264,10 @@ textarea:focus {
   width: 100%;
   display: inline-block;
 }
+.input._form-error {
+  border: 1px solid #ff3737;
+}
+
 textarea.input {
   resize: none;
   padding: 0;
@@ -2343,7 +2347,7 @@ body.popup-show::after {
 .keys__image img, .keys__image picture {
   max-width: 100%;
   height: auto;
-  width: inherit;
+  width: 100%;
 }
 .keys__text {
   flex: 1 1 auto;
