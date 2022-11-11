@@ -769,12 +769,12 @@ body.popup-show::after {
 }
 @media (min-width: 20em) and (max-width: 75em) {
   .header__logo {
-    width: calc(3.125rem + 1.125 * (100vw - 20rem) / 55);
+    width: calc(3.75rem + 0.5 * (100vw - 20rem) / 55);
   }
 }
 @media (max-width: 20em) {
   .header__logo {
-    width: 3.125rem;
+    width: 3.75rem;
   }
 }
 .header__logo img {
