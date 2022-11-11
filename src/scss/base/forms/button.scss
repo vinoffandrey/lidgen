@@ -14,19 +14,35 @@
 	opacity: 0.5;
 	transition: all .3s ease 0s;
 	cursor: pointer;
-	@media (any-hover: hover) {
-		&:hover {
-			color: $whiteColor;
-			background-color: $darkColor;
-			border: 1px solid $darkColor;
-		}
-	}
+	overflow: hidden;
+	z-index: 1;
 	&:active, &:focus {
 		color: $whiteColor;
 		background-color: #016A81;
-		border: 1px solid #016A81;
+		border: 2px solid #016A81;
 	}
 	&.active {
 		opacity: 1;
+		position: relative;
+		&:before {
+			content: "";
+			background-color: $darkColor;
+			top: -5%;
+			right: 100%;
+			height: 110%;
+			bottom: 0;
+			position: absolute;
+			left: 0;
+			z-index: -1;
+			transition: right .3s ease 0s;
+		}
+		&:hover {
+			color: $whiteColor;
+			&:before {
+				right:0;
+				border: 2px solid $darkColor;
+				border-radius: 8px;
+			}
+		}
 	}
 }

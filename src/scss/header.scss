@@ -18,6 +18,22 @@
 	&__logo {
 		@include adaptiveValue("height", 70, 40, $containerWidth, $minWidth, 1);
 		@include adaptiveValue("width", 68, 40, $containerWidth, $minWidth, 1);
+		@media(max-width: $mobileSmall) {
+				height: 40px!important;
+				width: 40px!important;
+		}
+		.mobile {
+			display: none;
+			@media(max-width: $mobileSmall) {
+				display: block;
+			}
+		}
+		.desktop {
+			display: block;
+			@media(max-width: $mobileSmall) {
+				display: none;
+			}
+		}
 	}
 
 	&__right {
@@ -52,6 +68,14 @@
 	&__list {
 		display: flex;
 		@include adaptiveValue("gap", 50, 30, $containerWidth, $minWidth, 1);
+		a {
+			transition: all .3s ease 0s;
+			@media (any-hover: hover){
+				&:hover{
+					color: #3FEAEA;
+				} 
+			}
+		}
 	}
 
 	&__link {
@@ -164,6 +188,7 @@
 				a {
 					font-size: 16px !important;
 				}
+				
 			}
 		}
 	}

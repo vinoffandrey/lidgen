@@ -8856,13 +8856,13 @@
             e.addEventListener("keydown", i, !1);
         });
       }),
-      document.addEventListener("mousemove", function (e) {
-        this.querySelectorAll(".team__right-body span").forEach((t) => {
-          const i = t.getAttribute("value"),
-            s = (window.innerWidth - e.pageX * i) / 90,
-            n = (window.innerHeight - e.pageY * i) / 90;
-          t.style.transform = `translateX(${s}px) translateY(${n}px)`;
-        });
+      document.addEventListener("mousemove", function (e) {}),
+      document.addEventListener("mousemove", ({ clientX: e, clientY: t }) => {
+        document
+          .querySelectorAll(".team__right-body._watcher-view")
+          .forEach((i) => {
+            i.style.setProperty("--x", e), i.style.setProperty("--y", t);
+          });
       }),
       (window.FLS = !0),
       (function (e) {

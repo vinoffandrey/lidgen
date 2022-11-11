@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.css?_v=20221110214723" integrity="sha512-xdNgqS9I7CHbzFYjDiySh1lV5Sc4sobLLAvHLqtZY6ynlCiWpl+eGPds9CAMFFst5QgZRgd92qfeg03sl3UCjA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20221110214723">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.css?_v=20221111145419" integrity="sha512-xdNgqS9I7CHbzFYjDiySh1lV5Sc4sobLLAvHLqtZY6ynlCiWpl+eGPds9CAMFFst5QgZRgd92qfeg03sl3UCjA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20221111145419">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,10 @@
 		<header class="header">
 			<div class="header__container">
 				<div class="header__body">
-					<a href="/" class="header__logo -ibg"><img src="img/header/logo.svg" alt=""></a>
+					<a href="/" class="header__logo -ibg_container">
+						<img class="desktop" src="img/header/logo.svg" alt="">
+						<img class="mobile" src="img/header/logo_mobile.svg" alt="">
+					</a>
 					<div class="header__right">
 						<div class="header__menu menu">
 							<div class="menu__icon icon-menu">
@@ -36,8 +39,8 @@
 							</nav>
 						</div>
 						<div class="header__social " data-da=".menu__body,35,2">
-							<a href="" target="_blanck" class="social__link icon-telegram"></a>
-							<a href="" target="_blanck" class="social__link icon-vk"></a>
+							<a href="https://t.me/poctibereza" target="_blanck" class="social__link icon-telegram"></a>
+							<a href="https://vk.com/losi_vc" target="_blanck" class="social__link icon-vk"></a>
 						</div>
 					</div>
 				</div>
@@ -47,40 +50,41 @@
 			<section class="main__section">
 				<div class="main__container">
 					<div class="main__top">
-						<div class="main__top-line" data-watch data-watch-once>
+						<div class="main__top-line">
 							<p class="text-20">Развивайте бизнес,<br> а маркетинг доверьте нам</p>
 							<h1 class="title-56">Масштабируем ваш бизнес</h1>
 						</div>
-						<div class="main__top-line" data-watch data-watch-once>
+						<div class="main__top-line">
 							<p class="title-56">через продуктовый подход</p>
 							<a data-goto="#contacts" data-goto-header class="button active">Связаться</a>
 						</div>
 					</div>
-					<div class="main__bottom -ibg" data-watch data-watch-once>
+					<div class="main__bottom -ibg">
 						<picture><source srcset="img/main/main.webp" type="image/webp"><img src="img/main/main.png" alt=""></picture>
 					</div>
 				</div>
 			</section>
 			<section class="sell__section">
 				<div class="sell__container">
-					<div class="sell__title title-36" data-watch data-watch-once>
+					<div class="sell__title title-36">
 						<h2>ваш новый IT-продукт плохо продается?</h2>
 					</div>
-					<div class="sell__body text-24" data-watch data-watch-once>
+					<div class="sell__body text-24">
 						<p>или новое направление запускается хаотично и вы не знаете каким образом выстроить грамотную
 							стратегию продаж и проверить востребованность на рынке?</p>
+						<picture><source srcset="img/sell/cub.webp" type="image/webp"><img src="img/sell/cub.png" alt=""></picture>
 					</div>
-					<div class="sell__subtitle text-32" data-watch data-watch-once>
+					<div class="sell__subtitle text-32">
 						<p>У нас есть готовое решение для IT-сферы!</p>
 					</div>
-					<div class="sell__arrow" data-watch data-watch-once>
+					<div class="sell__arrow">
 						<a data-goto="#product" data-goto-header><img src="img/sell/arrow.svg" alt=""></a>
 					</div>
 				</div>
 			</section>
 			<section class="product__section" id="product">
 				<div class="product__container">
-					<div class="product__title title-36" data-watch data-watch-once>
+					<div class="product__title title-36">
 						<h2>Продуктовый подход</h2>
 					</div>
 					<div class="product__body" data-watch data-watch-once>
@@ -130,37 +134,37 @@
 			</section>
 			<section class="stonks__section">
 				<div class="stonks__container">
-					<div class="stonks__title title-36" data-watch data-watch-once>
+					<div class="stonks__title title-36">
 						<h2>Ваша выгода — кратный рост продаж</h2>
 					</div>
-					<div class="stonks__text text-24" data-watch data-watch-once>
+					<div class="stonks__text text-24">
 						<p>Экономия времени и денег на упаковку продукта и запуск продаж за счет готовой продуктовой команды
 							с полным вовлечением в ваш продукт.</p>
 					</div>
 					<div class="stonks__images">
-						<img src="img/stonks/stonks_1.svg" data-watch data-watch-once class="stonks__image" alt="">
-						<img src="img/stonks/stonks_2.svg" data-watch data-watch-once class="stonks__image" alt="">
+						<img src="img/stonks/stonks_1.svg" class="stonks__image" alt="">
+						<img src="img/stonks/stonks_2.svg" class="stonks__image" alt="">
 					</div>
-					<div class="stonks__subtitle text-32" data-watch data-watch-once>
+					<div class="stonks__subtitle text-32">
 						<p>А еще мы можем подготовить продуктовую команду из ваших сотрудников!</p>
 					</div>
-					<div class="stonks__button" data-watch data-watch-once>
+					<div class="stonks__button">
 						<a data-goto="#contacts" data-goto-header class="button active">Связаться</a>
 					</div>
 				</div>
 			</section>
 			<section class="team__section" id="team">
 				<div class="team__container">
-					<div class="team__title title-36" data-watch data-watch-once>
+					<div class="team__title title-36">
 						<h2>В нашей команде </h2>
 					</div>
-					<div class="team__subtitle text-24" data-watch data-watch-once>
+					<div class="team__subtitle text-24">
 						<p>только профессионалы своего дела</p>
 					</div>
 					<div class="team__body">
 						<div class="team__left text-24">
-							<p data-watch data-watch-once>За каждым проектом закреплены:</p>
-							<ul class="team__list" data-watch data-watch-once>
+							<p>За каждым проектом закреплены:</p>
+							<ul class="team__list">
 								<li class="team__item">account-менеджер</li>
 								<li class="team__item">product-менеджер</li>
 								<li class="team__item">UX/UI-дизайнер</li>
@@ -172,7 +176,7 @@
 						</div>
 						<div class="team__right">
 							<div class="team__right-body" data-watch data-watch-once>
-								<picture><source srcset="img/team/team.webp" type="image/webp"><img src="img/team/team.png" alt=""></picture>
+								<picture><source srcset="img/team/team_desktop.webp" type="image/webp"><img src="img/team/team_desktop.png" alt=""></picture>
 								<span value="0.5" class="team__right-item"></span>
 								<span value="-0.6" class="team__right-item"></span>
 								<span value="1" class="team__right-item"></span>
@@ -182,7 +186,7 @@
 								<span value="0.3" class="team__right-item"></span>
 								<span value="-0.8" class="team__right-item"></span>
 								<span value="1.5" class="team__right-item"></span>
-								<span value="1" class="team__right-item"></span>
+								<span value=".5" class="team__right-item"></span>
 								<span value="-0.5" class="team__right-item"></span>
 								<span value="0.7" class="team__right-item"></span>
 								<span value="-0.7" class="team__right-item"></span>
@@ -195,14 +199,14 @@
 			</section>
 			<section class="keys__section" id="keys">
 				<div class="keys__container">
-					<div class="keys__title title-36" data-watch data-watch-once>
+					<div class="keys__title title-36">
 						<h2>кейсы </h2>
 					</div>
-					<div class="keys__subtitle text-24" data-watch data-watch-once>
+					<div class="keys__subtitle text-24">
 						<p>Часть наших клиентов из совершено различных ниш, но при этом с подходящими именно им продуктовыми
 							инструментами.</p>
 					</div>
-					<div class="keys__body" data-watch data-watch-once>
+					<div class="keys__body">
 						<div class="keys__item">
 							<div class="keys__image">
 								<picture><source srcset="img/keys/keys_1.webp" type="image/webp"><img src="img/keys/keys_1.png" alt=""></picture>
@@ -248,21 +252,21 @@
 			</section>
 			<section class="form__section" id="contacts">
 				<div class="form__container">
-					<div class="form__title title-36" data-watch data-watch-once>
+					<div class="form__title title-36">
 						<h2>Свяжитесь с нами!</h2>
 					</div>
-					<div class="form__social" data-watch data-watch-once>
+					<div class="form__social">
 						<div class="form__social-item">
-							<a href="" class="icon-telegram"></a>
+							<a href="https://t.me/poctibereza" target="_blanck" class="icon-telegram"></a>
 						</div>
 						<div class="form__social-item">
-							<a href="" class="icon-vk"></a>
+							<a href="https://vk.com/losi_vc" target="_blanck" class="icon-vk"></a>
 						</div>
 						<div class="form__social-item">
-							<a href="" class="icon-youtube"></a>
+							<a href="https://www.youtube.com/c/ITStudioru" target="_blanck" class="icon-youtube"></a>
 						</div>
 					</div>
-					<form action data-dev class="form__body" data-watch data-watch-once>
+					<form action data-dev class="form__body">
 						<div class="form__body-item">
 							<span class="text-16">Имя *</span>
 							<input data-required class="input text-16" placeholder="Введите имя" type="text">
@@ -274,7 +278,7 @@
 							<p class="text-12">Пожалуйста, введите корректные данные</p>
 						</div>
 						<div class="form__body-item">
-							<input data-popup-message="#popup__message" type="submit" class="button active form__button" value="Отправить">
+							<button data-popup-message="#popup__message" type="submit" class="button active form__button">Отправить</button>
 						</div>
 						<div class="form__body-item checkbox__body">
 							<input data-required id="input_form" class="checkbox" type="checkbox" checked>
@@ -331,7 +335,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20221110214723"></script>
+	<script src="js/app.min.js?_v=20221111145419"></script>
 </body>
 
 </html>

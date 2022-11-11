@@ -23,6 +23,12 @@
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	transition: all .3s ease 0s;
+	@media (any-hover: hover){
+		&:hover{
+			color: #3FEAEA;
+		} 
+	}
  }
 
 %ic {

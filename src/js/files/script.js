@@ -215,11 +215,26 @@ window.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("mousemove", parallax);
 function parallax(event) {
-	this.querySelectorAll(".team__right-body span").forEach((shift) => {
-		const position = shift.getAttribute("value");
-		const x = (window.innerWidth - event.pageX * position) / 90;
-		const y = (window.innerHeight - event.pageY * position) / 90;
-
-		shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-	});
+	// this.querySelectorAll(".team__right-body._watcher-view span").forEach((shift) => {
+	// 	const position = shift.getAttribute("value");
+	// 	const x = (window.innerWidth - event.pageX * position) / 50;
+	// 	const y = (window.innerHeight - event.pageY * position) / 5
+	// 	shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+	// }
 }
+
+// document.querySelectorAll(".team__right-body._watcher-view").forEach(parallaxWrap =>
+// 	parallaxWrap.addEventListener("mousemove", ({ clientX, clientY }) => {
+// 		parallaxWrap.style.setProperty("--x", clientX);
+// 		parallaxWrap.style.setProperty("--y", clientY);
+// 	}),
+// );
+document.addEventListener("mousemove", ({ clientX, clientY }) => {
+	document.querySelectorAll(".team__right-body._watcher-view").forEach(parallaxWrap => {
+		parallaxWrap.style.setProperty("--x", clientX);
+		parallaxWrap.style.setProperty("--y", clientY);
+	})
+});
+// function parallax() {
+// 	document.querySelectorAll(".team__right-body._watcher-view").forEach(parallaxWrap =>
+// }

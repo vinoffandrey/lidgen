@@ -16,6 +16,11 @@ a:focus,
 a:active {
 	outline: none;
 }
+:root {
+	--shift: 0;
+	--x: 0;
+	--y: 0;
+}
 html,
 body {
 	height: 100%;
