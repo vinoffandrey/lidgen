@@ -211,30 +211,13 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//Paralax
-
-document.addEventListener("mousemove", parallax);
-function parallax(event) {
-	// this.querySelectorAll(".team__right-body._watcher-view span").forEach((shift) => {
-	// 	const position = shift.getAttribute("value");
-	// 	const x = (window.innerWidth - event.pageX * position) / 50;
-	// 	const y = (window.innerHeight - event.pageY * position) / 5
-	// 	shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-	// }
-}
-
-// document.querySelectorAll(".team__right-body._watcher-view").forEach(parallaxWrap =>
-// 	parallaxWrap.addEventListener("mousemove", ({ clientX, clientY }) => {
-// 		parallaxWrap.style.setProperty("--x", clientX);
-// 		parallaxWrap.style.setProperty("--y", clientY);
-// 	}),
-// );
 document.addEventListener("mousemove", ({ clientX, clientY }) => {
+	let centerX = document.documentElement.clientWidth / 2;
+	let centerY = document.documentElement.clientHeight / 2;
+	let finalX = clientX - centerX;
+	let finalY = clientY - centerY;
 	document.querySelectorAll(".team__right-body._watcher-view").forEach(parallaxWrap => {
-		parallaxWrap.style.setProperty("--x", clientX);
-		parallaxWrap.style.setProperty("--y", clientY);
+		parallaxWrap.style.setProperty("--x", finalX);
+		parallaxWrap.style.setProperty("--y", finalY);
 	})
 });
-// function parallax() {
-// 	document.querySelectorAll(".team__right-body._watcher-view").forEach(parallaxWrap =>
-// }

@@ -8858,10 +8858,14 @@
       }),
       document.addEventListener("mousemove", function (e) {}),
       document.addEventListener("mousemove", ({ clientX: e, clientY: t }) => {
+        let i = document.documentElement.clientWidth / 2,
+          s = document.documentElement.clientHeight / 2,
+          n = e - i,
+          o = t - s;
         document
           .querySelectorAll(".team__right-body._watcher-view")
-          .forEach((i) => {
-            i.style.setProperty("--x", e), i.style.setProperty("--y", t);
+          .forEach((e) => {
+            e.style.setProperty("--x", n), e.style.setProperty("--y", o);
           });
       }),
       (window.FLS = !0),
