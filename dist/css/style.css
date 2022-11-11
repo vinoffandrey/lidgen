@@ -743,6 +743,10 @@ body.popup-show::after {
     padding-bottom: 1.25rem;
   }
 }
+.header__logo {
+  display: flex;
+  align-items: center;
+}
 @media (min-width: 75em) {
   .header__logo {
     height: 4.375rem;
@@ -750,12 +754,12 @@ body.popup-show::after {
 }
 @media (min-width: 20em) and (max-width: 75em) {
   .header__logo {
-    height: calc(2.5rem + 1.875 * (100vw - 20rem) / 55);
+    height: calc(3.125rem + 1.25 * (100vw - 20rem) / 55);
   }
 }
 @media (max-width: 20em) {
   .header__logo {
-    height: 2.5rem;
+    height: 3.125rem;
   }
 }
 @media (min-width: 75em) {
@@ -765,35 +769,17 @@ body.popup-show::after {
 }
 @media (min-width: 20em) and (max-width: 75em) {
   .header__logo {
-    width: calc(2.5rem + 1.75 * (100vw - 20rem) / 55);
+    width: calc(3.125rem + 1.125 * (100vw - 20rem) / 55);
   }
 }
 @media (max-width: 20em) {
   .header__logo {
-    width: 2.5rem;
+    width: 3.125rem;
   }
 }
-@media (max-width: 29.99875em) {
-  .header__logo {
-    height: 40px !important;
-    width: 40px !important;
-  }
-}
-.header__logo .mobile {
-  display: none;
-}
-@media (max-width: 29.99875em) {
-  .header__logo .mobile {
-    display: block;
-  }
-}
-.header__logo .desktop {
-  display: block;
-}
-@media (max-width: 29.99875em) {
-  .header__logo .desktop {
-    display: none;
-  }
+.header__logo img {
+  max-width: 100%;
+  height: auto;
 }
 .header__right {
   display: flex;

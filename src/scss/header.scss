@@ -16,24 +16,15 @@
 	}
 
 	&__logo {
-		@include adaptiveValue("height", 70, 40, $containerWidth, $minWidth, 1);
-		@include adaptiveValue("width", 68, 40, $containerWidth, $minWidth, 1);
-		@media(max-width: $mobileSmall) {
-				height: 40px!important;
-				width: 40px!important;
+		@include adaptiveValue("height", 70, 50, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("width", 68, 50, $containerWidth, $minWidth, 1);
+		display: flex;
+		align-items: center;
+		img {
+			max-width: 100%;
+			height: auto;
 		}
-		.mobile {
-			display: none;
-			@media(max-width: $mobileSmall) {
-				display: block;
-			}
-		}
-		.desktop {
-			display: block;
-			@media(max-width: $mobileSmall) {
-				display: none;
-			}
-		}
+
 	}
 
 	&__right {
