@@ -8856,7 +8856,6 @@
             e.addEventListener("keydown", i, !1);
         });
       }),
-      document.addEventListener("mousemove", function (e) {}),
       document.addEventListener("mousemove", ({ clientX: e, clientY: t }) => {
         let i = document.documentElement.clientWidth / 2,
           s = document.documentElement.clientHeight / 2,

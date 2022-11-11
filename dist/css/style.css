@@ -2343,6 +2343,8 @@ body.popup-show::after {
 .keys__image {
   flex: 0 1 auto;
   text-align: center;
+  border: 1px solid #E7E7E7;
+  border-radius: 4px;
 }
 .keys__image img, .keys__image picture {
   max-width: 100%;
