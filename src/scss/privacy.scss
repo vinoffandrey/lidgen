@@ -1,0 +1,24 @@
+.privacy {
+
+	&__section {
+		@include adaptiveValue("margin-top", 80, 30, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 120, 40, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 30, 20, $containerWidth, $minWidth, 1);
+	}
+
+	&__body {
+		p {
+			@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+		}
+	}
+
+	&__subtitle {
+		font-weight: 700;
+	}
+}
