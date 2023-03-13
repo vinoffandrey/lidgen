@@ -488,12 +488,14 @@
 		p {
 			max-width: 790px;
 		}
-		img, picture {
+		picture {
 			text-align: center;
+		}
+		img {
 			@include adaptiveValue("width", 240, 120, $containerWidth, $minWidth, 1);
 			@include adaptiveValue("height", 110, 55, $containerWidth, $minWidth, 1);
 			@media(max-width:$mobileSmall) {
-					width: 40%!important;
+					width: 50%!important;
 					height: auto!important;
 			}
 		}
