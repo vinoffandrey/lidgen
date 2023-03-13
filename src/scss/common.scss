@@ -14,7 +14,7 @@
 	font-family: 'Rubik';
 	color: #000;
 	font-weight: 700;
-	@include adaptiveValue("font-size", 50, 28, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("font-size", 50, 27, $containerWidth, $minWidth, 1);
 	line-height: 130%;
 	text-transform: uppercase;
 	@media(max-width: 1180px) and (min-width: 910px) {

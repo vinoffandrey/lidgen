@@ -541,12 +541,12 @@ body.popup-show::after {
 }
 @media (min-width: 20em) and (max-width: 75em) {
   .title-50 {
-    font-size: calc(1.75rem + 1.375 * (100vw - 20rem) / 55);
+    font-size: calc(1.6875rem + 1.4375 * (100vw - 20rem) / 55);
   }
 }
 @media (max-width: 20em) {
   .title-50 {
-    font-size: 1.75rem;
+    font-size: 1.6875rem;
   }
 }
 @media (max-width: 1180px) and (min-width: 910px) {
@@ -1902,38 +1902,41 @@ body.popup-show::after {
 .stonks__text p {
   max-width: 790px;
 }
+.stonks__text img, .stonks__text picture {
+  text-align: center;
+}
 @media (min-width: 75em) {
-  .stonks__text img {
+  .stonks__text img, .stonks__text picture {
     width: 15rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
-  .stonks__text img {
+  .stonks__text img, .stonks__text picture {
     width: calc(7.5rem + 7.5 * (100vw - 20rem) / 55);
   }
 }
 @media (max-width: 20em) {
-  .stonks__text img {
+  .stonks__text img, .stonks__text picture {
     width: 7.5rem;
   }
 }
 @media (min-width: 75em) {
-  .stonks__text img {
+  .stonks__text img, .stonks__text picture {
     height: 6.875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 75em) {
-  .stonks__text img {
+  .stonks__text img, .stonks__text picture {
     height: calc(3.4375rem + 3.4375 * (100vw - 20rem) / 55);
   }
 }
 @media (max-width: 20em) {
-  .stonks__text img {
+  .stonks__text img, .stonks__text picture {
     height: 3.4375rem;
   }
 }
 @media (max-width: 29.99875em) {
-  .stonks__text img {
+  .stonks__text img, .stonks__text picture {
     width: 40% !important;
     height: auto !important;
   }
