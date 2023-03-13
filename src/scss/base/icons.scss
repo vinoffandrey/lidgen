@@ -9,10 +9,22 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-[class^="_icon-"],
-[class*=" _icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
 	&:before {
 		@extend %ic;
 		display: block;
 	}
 }
+.icon-yandex:before {
+	content: "\e900";
+ }
+ .icon-behance:before {
+	content: "\e901";
+ }
+ .icon-vk:before {
+	content: "\e921";
+ }
+ .icon-telegram:before {
+	content: "\e922";
+ }

@@ -70,6 +70,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"fonts": "^0.0.2",
 		"inputmask": "^5.0.7",
 		"simplebar": "latest"
 	}

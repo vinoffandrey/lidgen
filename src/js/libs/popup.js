@@ -227,9 +227,8 @@ export class Popup {
 					popup: this
 				}
 			}));
-			this.popupLogging(`Открыл попап`);
 
-		} else this.popupLogging(`Ой ой, такого попапа нет. Проверьте корректность ввода. `);
+		}
 	}
 	close(selectorValue) {
 		if (selectorValue && typeof (selectorValue) === "string" && selectorValue.trim() !== "") {
@@ -265,8 +264,6 @@ export class Popup {
 		setTimeout(() => {
 			this._focusTrap();
 		}, 50);
-
-		this.popupLogging(`Закрыл попап`);
 	}
 	// Получение хэша 
 	_getHash() {

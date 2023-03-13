@@ -10,6 +10,17 @@
 		transform: translateY(10px);
 	}
 }
+@keyframes arrowRight {
+	0% {
+		transform: translateX(10px);
+	}
+	70% {
+		transform: translateX(-10px);
+	}
+	100% {
+		transform: translateX(10px);
+	}
+}
 @keyframes opacity {
 	0% {
 		transform: scale(0);
@@ -22,6 +33,50 @@
 }
 
 //====================================================================================================
+
+
+// Top__section
+//=======================================================================================================
+
+.top {
+
+	&__section {
+		@include adaptiveValue("margin-top", 80, 15, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+		background-image: url('../img/top/romb.svg');
+		background-position: right center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		@media(max-width: $mobileSmall) {
+			background-position: right bottom;
+			background-size: 50%;
+		}
+	}
+
+	&__body {
+	}
+
+	&__title {
+		@include adaptiveValue("padding-top", 60, 15, $containerWidth, $minWidth, 1);
+		max-width: 876px;
+		span {
+			color: $blueColor;
+		}
+	}
+
+	&__subtitle {
+		@include adaptiveValue("margin-top", 50, 25, $containerWidth, $minWidth, 1);
+	}
+
+	&__button {
+		@include adaptiveValue("margin-top", 30, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 30, 15, $containerWidth, $minWidth, 1);
+	}
+}
+
 
 // Main__section
 //=======================================================================================================
@@ -253,7 +308,7 @@
 		align-items: center;
 		gap: 16px;
 		row-gap: 16px;
-		flex: 0 1 50%;
+		flex: 0 1 100%;
 		padding-right: 25px;
 		span {
 			flex: 0 0 60px;
@@ -410,22 +465,7 @@
 .stonks {
 
 	&__section {
-		@include adaptiveValue("margin-top", 130, 60, $containerWidth, $minWidth, 1);
-		position: relative;
-		&:after {
-			content: "";
-			position: absolute;
-			@include adaptiveValue("top", -20, 65, $containerWidth, $minWidth, 1);
-			@include adaptiveValue("right", -165, -220, $containerWidth, $minWidth, 1);
-			@include adaptiveValue("width", 760, 330, $containerWidth, $minWidth, 1);
-			@include adaptiveValue("height", 760, 330, $containerWidth, $minWidth, 1);
-			background-image: url('../img/stonks/kvadrat.svg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			@media(max-width: 1500px) and (min-width: $tablet) {
-				right: -380px!important;
-			}
-		}
+		@include adaptiveValue("margin-top", 140, 60, $containerWidth, $minWidth, 1);
 	}
 
 	&__container {
@@ -433,63 +473,160 @@
 
 	&__title {
 		text-align: center;
-		&._watcher-view {
-			animation: opacity 1s ease-in-out;
-		}
 	}
 
 	&__text {
-		max-width: 860px;
+		display: flex;
+		justify-content: space-between;
 		@include adaptiveValue("margin-top", 60, 30, $containerWidth, $minWidth, 1);
-		&._watcher-view {
-			animation: opacity 1.5s ease-in-out;
+		gap: 15px;
+		@media(max-width:$mobileSmall) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		p {
+			max-width: 790px;
+		}
+		img {
+			@include adaptiveValue("width", 240, 120, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("height", 110, 55, $containerWidth, $minWidth, 1);
+			@media(max-width:$mobileSmall) {
+					width: 40%!important;
+					height: auto!important;
+			}
 		}
 	}
 
-	&__images {
-		max-width: 860px;
+	&__body {
 		display: flex;
-		@include adaptiveValue("margin-top", 80, 20, $containerWidth, $minWidth, 1);
-		@include adaptiveValue("margin-bottom", 90, 30, $containerWidth, $minWidth, 1);
-		@media(max-width: $mobileSmall) {
-			flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("margin-top", 35, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("gap", 15, 10, $containerWidth, $minWidth, 1);
+		@media(max-width: $mobile) {
+			flex-direction: column;
 		}
-		img, picture {
-			flex: 0 1 50%;
-			pointer-events: none;
-			min-width: 220px;
+	}
+
+	&__left {
+		text-align: center;
+		flex: 0 1 400px;
+		h6 {
+			@include adaptiveValue("margin-bottom", 15, 7, $containerWidth, $minWidth, 1);
+		}
+		@media(max-width: $mobile) {
+			flex: 1 1 auto!important;
+		}
+	}
+
+	&__center {
+		@media(max-width: $mobile) {
+			transform: rotate(90deg)!important;
+			margin-top: 15px;
+		}
+		img {
+			animation: arrowRight 2s infinite ease-in-out;
+			@media(max-width: $mobile) {
+				max-width: 80%!important;
+				height: auto;
+			}
 			@media(max-width: $mobileSmall) {
-				flex: 1 1 100%;
+				max-width: 60%!important;
+				height: auto;
 			}
-		}
-	}
-	&__image {
-		&:nth-child(1) {
-			&._watcher-view {
-				animation: opacity 2s ease-in-out;
-			}
-		}
-		&:nth-child(2) {
-			&._watcher-view {
-				animation: opacity 2.5s ease-in-out;
-			}
-		}
-	}
-	&__subtitle {
-		@include adaptiveValue("margin-bottom", 50, 30, $containerWidth, $minWidth, 1);
-		&._watcher-view {
-			animation: opacity 2s ease-in-out;
 		}
 	}
 
-	&__button {
-		display: flex;
-		justify-content: center;
-		&._watcher-view {
-			animation: opacity 2.5s ease-in-out;
+	&__right {
+		text-align: center;
+		flex: 0 1 440px;
+		@media(max-width: $mobile) {
+			flex: 1 1 auto!important;
 		}
 	}
 }
+
+// Price__section
+//=======================================================================================================
+
+.stonks__price {
+	background-image: url('../img/price/background.svg');
+	background-position: left 65%;
+	background-repeat: no-repeat;
+	background-size: inherit;
+	@media(max-width: $tablet) {
+		background-size: 30%!important;
+	}
+	@media(max-width: $mobile) {
+		background-size: 20%!important;
+	}
+	@media(max-width: $mobileSmall) {
+		background-size: 30%!important;
+	}
+}
+
+.price {
+
+	&__section {
+		@include adaptiveValue("margin-top", 140, 60, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 60, 30, $containerWidth, $minWidth, 1);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+		@media(max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		flex: 0 1 635px;
+		p {
+			@include adaptiveValue("padding-left", 100, 40, $containerWidth, $minWidth, 1);
+			font-weight: 700!important;
+			background-image: url('../img/price/arrow.svg');
+			background-position: left center;
+			background-repeat: no-repeat;
+			background-size: 10%;
+		}
+		span {
+			display: inline-block;
+			@include adaptiveValue("padding-left", 100, 40, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("margin-top", 30, 15, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("margin-bottom", 30, 15, $containerWidth, $minWidth, 1);
+		}
+		@media(max-width: $mobile) {
+			flex: 1 1 auto!important;
+		}
+	}
+
+	&__center {
+		@media(max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__right {
+		flex: 0 1 360px;
+		@media(max-width: $mobile) {
+			flex: 1 1 auto!important;
+			text-align: center;
+		}
+	}
+}
+
+
 
 // Team__section
 //=======================================================================================================
@@ -542,12 +679,15 @@
 	}
 
 	&__list {
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 
 	&__item {
 		list-style: disc;
 		@include adaptiveValue("margin-left", 35, 27, $containerWidth, $minWidth, 1);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10, $containerWidth, $minWidth, 1);
+		}
 		&:nth-child(1) {
 			._watcher-view & {
 				animation: opacity 2.2s ease-in-out;
@@ -958,6 +1098,7 @@
 		@include adaptiveValue("margin-top", 40, 30, $containerWidth, $minWidth, 1);
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		@include adaptiveValue("gap", 40, 50, $containerWidth, $minWidth, 1);
 		&._watcher-view {
 			animation: opacity 1.5s ease-in-out;
@@ -1026,6 +1167,44 @@
 		&:nth-child(4) {
 			._watcher-view &{
 				animation: opacity 2.6s ease-in-out;
+			}
+		}
+	}
+}
+
+// Error__section
+//=======================================================================================================
+
+
+.error {
+
+	&__section {
+		@include adaptiveValue("margin-top", 120, 30, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("margin-bottom", 150, 50, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 10, 5, $containerWidth, $minWidth, 1);
+	}
+
+	&__numbers {
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__button {
+		@include adaptiveValue("margin-top", 50, 30, $containerWidth, $minWidth, 1);
+		.button {
+			@media(max-width: $mobileSmall) {
+				padding: 10px 40px;
 			}
 		}
 	}

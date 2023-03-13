@@ -29,7 +29,7 @@
 
 	&__right {
 		display: flex;
-		@include adaptiveValue("gap", 83, 30, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("gap", 135, 30, $containerWidth, 1000, 1);
 	}
 
 	&__menu {
@@ -58,7 +58,7 @@
 
 	&__list {
 		display: flex;
-		@include adaptiveValue("gap", 50, 30, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("gap", 60, 20, $containerWidth, 768, 1);
 		a {
 			transition: all .3s ease 0s;
 			@media (any-hover: hover){
@@ -90,6 +90,12 @@
 	}
 	&-vk {
 		font-size: 14px;
+	}
+	&-yandex {
+		font-size: 24px;
+	}
+	&-behance {
+		font-size: 15px;
 	}
 }
 

@@ -10,6 +10,17 @@
 		font-size: 40px;
 	}
 }
+.title-50 {
+	font-family: 'Rubik';
+	color: #000;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 50, 28, $containerWidth, $minWidth, 1);
+	line-height: 130%;
+	text-transform: uppercase;
+	@media(max-width: 1180px) and (min-width: 910px) {
+		font-size: 35px;
+	}
+}
 .title-36 {
 	font-family: 'Rubik';
 	color: #000;
@@ -17,6 +28,28 @@
 	@include adaptiveValue("font-size", 36, 24, $containerWidth, $minWidth, 1);
 	line-height: 140%;
 	text-transform: uppercase;
+}
+.title-48 {
+	font-family: 'Rubik';
+	color: #000;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 48, 20, $containerWidth, $minWidth, 1);
+	line-height: 130%;
+	text-transform: uppercase;
+}
+.title-30 {
+	font-family: 'Rubik';
+	color: #000;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 30, 22, $containerWidth, $minWidth, 1);
+	line-height: 150%;
+}
+.text-30 {
+	font-family: 'Lato';
+	color: #000;
+	font-weight: 700;
+	@include adaptiveValue("font-size", 30, 19, $containerWidth, $minWidth, 1);
+	line-height: 150%;
 }
 .title-28 {
 	font-family: 'Rubik';

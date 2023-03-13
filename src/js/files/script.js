@@ -148,27 +148,31 @@ function documentActions(e) {
 }
 
 
+const video = document.getElementById('playerid');
+const videoSrc = document.getElementById('playerid').getAttribute("src");
+const close = document.getElementById('video__close');
+close.addEventListener("click", function () {
+	video.removeAttribute("src");
+	video.setAttribute("src", videoSrc);
+});
+
 
 
 //Управление кнопкой отправки по чекбоксу
 
-function checkboxFunction() {
-	const checkboxInput = document.querySelector('.checkbox');
-	const buttonClass = document.querySelector('.form__button');
+// function checkboxFunction() {
+// 	const checkboxInput = document.querySelector('.checkbox');
+// 	const buttonClass = document.querySelector('.form__button');
 
-	checkboxInput.addEventListener('change', () => {
-		buttonClass.classList.toggle('active');
-		buttonClass.toggleAttribute('disabled');
-	})
+// 	checkboxInput.addEventListener('change', () => {
+// 		buttonClass.classList.toggle('active');
+// 		buttonClass.toggleAttribute('disabled');
+// 	})
 
-}
-checkboxFunction();
+// }
+// checkboxFunction();
 
 
-function requiredChecked() {
-
-}
-requiredChecked();
 
 
 //Маска телефона
@@ -221,3 +225,4 @@ document.addEventListener("mousemove", ({ clientX, clientY }) => {
 		parallaxWrap.style.setProperty("--y", finalY);
 	})
 });
+

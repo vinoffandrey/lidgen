@@ -62,8 +62,6 @@ export class ScrollWatcher {
 				// Инициализация наблюдателя со своими настройками
 				this.scrollWatcherInit(groupItems, configWatcher);
 			});
-		} else {
-			this.scrollWatcherLogging('Сплю, нет объектов для слежения. ZzzZZzz');
 		}
 	}
 	// Функция создания настроек

@@ -80,8 +80,6 @@ export class SelectConstructor {
 			if (selectItems.length) {
 				this.selectsInit(selectItems);
 				this.setLogging(`Проснулся, построил селектов: (${selectItems.length})`);
-			} else {
-				this.setLogging('Сплю, нет ни одного select zzZZZzZZz');
 			}
 		}
 	}
